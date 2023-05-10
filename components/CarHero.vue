@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative h-[calc(100vh_-_69px)] w-full bg-[url('bg-hero.jpg')] bg-cover bg-center bg-no-repeat"
+    class="relative h-[calc(100vh_-_69px)] w-full bg-hero-pattern bg-cover bg-center bg-no-repeat"
   >
     <div class="absolute z-10 flex h-full w-full items-center justify-center">
       <div class="w-1/2 text-center">
