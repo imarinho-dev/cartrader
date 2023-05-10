@@ -3,7 +3,7 @@
     class="relative mb-5 h-[200px] w-full cursor-pointer overflow-hidden border shadow"
   >
     <Icon
-      @click="favored = !favored"
+      @click="emit('favor', car.id)"
       class="absolute right-5 top-2 z-20 w-7"
       :name="favored ? 'heroicons-solid:heart' : 'heroicons-outline:heart'"
       :class="favored ? 'text-red-500' : ''"
@@ -27,7 +27,10 @@
 <script setup>
 const props = defineProps({
   car: Object,
+  favored: Boolean,
 });
 
-const favored = useState(`favored-${props.car.id}`, () => false);
+const emit = defineEmits(["favor"]);
+
+// const favored = useState(`favored-${props.car.id}`, () => false);
 </script>
