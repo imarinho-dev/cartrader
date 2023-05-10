@@ -1,10 +1,15 @@
 <template>
   <div
-    class="mb-5 h-[200px] w-full cursor-pointer overflow-hidden border shadow"
-    @click="navigateTo(`/car/${car.name}-${car.id}`)"
+    class="relative mb-5 h-[200px] w-full cursor-pointer overflow-hidden border shadow"
   >
-    <div class="flex h-full">
-      <img
+    <Icon
+      @click="favored = !favored"
+      class="absolute right-5 top-2 z-20 w-7"
+      :name="favored ? 'heroicons-solid:heart' : 'heroicons-outline:heart'"
+      :class="favored ? 'text-red-500' : ''"
+    />
+    <div class="flex h-full" @click="navigateTo(`/car/${car.name}-${car.id}`)">
+      <NuxtImg
         :src="car.url"
         alt="Car 1"
         class="h-full w-[300px] object-cover object-center"
@@ -23,4 +28,6 @@
 const props = defineProps({
   car: Object,
 });
+
+const favored = useState(`favored-${props.car.id}`, () => false);
 </script>

@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/google-fonts",
+    "@nuxt/image-edge",
+    "nuxt-icon",
+  ],
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
     configPath: "tailwind.config",
