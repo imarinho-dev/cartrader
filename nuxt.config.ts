@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxt/image-edge",
     "nuxt-icon",
+    "@nuxtjs/supabase",
   ],
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
